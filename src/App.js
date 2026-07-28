@@ -1,4 +1,13 @@
-import logo from './logo.svg';
+// ====================
+// Project
+// Stanley Nguyen
+// Humber College
+// CPAN-144-RNA
+// Ronak Sheth
+// August 17, 2026
+// --------------------
+// This program demonstrates 
+// ====================
 import './App.css';
 
 function App() {
