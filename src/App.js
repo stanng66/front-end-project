@@ -9,24 +9,18 @@
 // This program demonstrates 
 // ====================
 import './App.css';
+import Project from './project'            // Component 3
+import BookSearch from './BookSearch';     // Component 1 and 2
+import Countries from './countries';       // Component 4
+import BookDetails from './bookDetails';   // Additional component
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Project />
+      <BookSearch />
+      <Countries />
+      <BookDetails />
     </div>
   );
 }
