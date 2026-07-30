@@ -6,25 +6,65 @@
 // Ronak Sheth
 // August 17, 2026
 // --------------------
-// This program demonstrates 
+// This program demonstrates react, routing, api integration and rendering
 // ====================
 // the Api i chose is this url
 // https://marketplace.apilayer.com/big_book-api
 
-// Project Requirement: component 3 - information about both group members like name, interest, contribution,ambition
 import './project.css';
 
 function Project() {
-
+    // Project Requirement: component 3 - information about both group members like name, interest, contribution, ambition
     return (
         <>
         <div className="Header"> 
           <h1> Final Project </h1>
           <h2> Stanley Nguyen </h2>
-          <h3> CPAN-144 </h3>
+          <h3> Advance Front-End Programming - CPAN-144-RNA </h3>
         </div>
 
-        <div> </div>
+        <div classname="student-info"> 
+            <h3>Member Information</h3>
+            <p>Member name: Stanley Nguyen</p>
+            <p>Student id: N01570766</p>
+            <p>Group Status: Individual (solo)</p>
+        </div>
+
+        <div className="student-interest"> 
+            <h3>Interest</h3>
+            <p>I am interested in learning some front-end development as well as other languages and databse to build both my technical skills and problem-solving abilities.</p>
+        </div>
+
+        <div className="student-contribution"> 
+            <h3>Contribution</h3>
+            <p>I contributed to all parts of this project including setting up React Router, building each components, integrating the Big Book API, designing the layout, and test the application to ensure everything works smoothly.</p>
+        </div>
+
+        <div className="student-ambition"> 
+            <h3>Ambition</h3>
+            <p>My ambition is to continue improving my front-end and back-end development skills to eventually build a full-stack application on my own. I aim to continue learning more modern web technologies as I progress in my studies.</p>
+        </div>
+
+        <div classname="skills-used"> 
+            <h3>Skills Used</h3>
+            <ul>
+                <li>React Components</li>
+                <li>React Router</li>
+                <li>API Fetching</li>
+                <li>javascript ES6</li>
+                <li>CSS Styling</li>
+            </ul>
+        </div>
+
+        <div className="tools-tech"> 
+            <h3>Tools & Technologies</h3>
+            <p>React, JavaScript, APILayer Big Book API, Visual Studio Code, Github</p>
+        </div>
+
+        <div className="project-summary"> 
+            <h3>Project Summary</h3>
+            <p>This project demonstrates React components, routingm API integration, and rendering. It includes four required components and additional features for enhanced functionality.</p>
+        </div>
         </>
     );
 }
