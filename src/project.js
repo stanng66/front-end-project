@@ -18,9 +18,8 @@ function Project() {
     return (
         <>
         <div className="Header"> 
-          <h1> Final Project </h1>
-          <h2> Stanley Nguyen </h2>
-          <h3> Advance Front-End Programming - CPAN-144-RNA </h3>
+          <h2> Component 3 </h2>
+          <h3> Stanley Nguyen </h3>
         </div>
 
         <div classname="student-info"> 
@@ -28,6 +27,7 @@ function Project() {
             <p>Member name: Stanley Nguyen</p>
             <p>Student id: N01570766</p>
             <p>Group Status: Individual (solo)</p>
+            <p>Class: Advance Front-End Programming - CPAN-144-RNA</p>
         </div>
 
         <div className="student-interest"> 

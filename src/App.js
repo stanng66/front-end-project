@@ -19,19 +19,17 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 function App() {
   return (
     <>
-    {/* <div className="App">
-      <Project />
-      <BookSearch />
-      <Countries />
-      <BookDetails />
-    </div> */}
-
+    <div className="Header"> 
+      <h1> Final Project </h1>
+      <h2> Stanley Nguyen </h2>
+    </div>
+    
     <BrowserRouter>
       <nav>
-        <Link to="/project">Project</Link>
-        <Link to="/books">Book Search</Link>
-        <Link to="/countries">Countries</Link>
-        <Link to="/details">Book Details</Link>
+        <Link to="/project">Project</Link> {"   "} |
+        <Link to="/books">Book Search</Link> {"   "} |
+        <Link to="/countries">Countries</Link> {"   "} |
+        <Link to="/details">Book Details</Link> {"   "}
       </nav>
 
       <Routes>

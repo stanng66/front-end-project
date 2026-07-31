@@ -34,14 +34,16 @@ export default function BookSearch() {
           <h2>Book discovery</h2>
 
           {/* Project Requirement: component 2 - ask user input data */}
-          <input> 
-          type="text" 
-          placeholder="Search a book"
-          value={query}
-          onCharge={(e) => setQuery(e.target.value)}
-          </input>
+          <input
+            type="text"
+            placeholder="Search a book"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
 
           <button onClick={searchBooks}>Search</button>
+
+          <p style={{ color: "red" }}>{error}</p>
 
           {books.map((group, index) => (
             <div key={index}>
@@ -56,5 +58,3 @@ export default function BookSearch() {
         </>
     );
 }
-
-export default BookSearch;
