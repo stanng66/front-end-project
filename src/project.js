@@ -8,9 +8,7 @@
 // --------------------
 // This program demonstrates react, routing, api integration and rendering
 // ====================
-// the Api i chose is this url
-// https://marketplace.apilayer.com/big_book-api
-
+// Project Requirement: Your web application should utilize JSON data extracted from a Web API - https://marketplace.apilayer.com/big_book-api
 import './project.css';
 
 function Project() {

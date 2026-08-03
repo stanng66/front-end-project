@@ -9,6 +9,7 @@
 // This program demonstrates react, routing, api integration and rendering
 // ====================
 // Project Requirement: optional/additional components
+import './bookDetails.css';
 import { useEffect, useState } from "react";
 
 export default function BookDetails() {

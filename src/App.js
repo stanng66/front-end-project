@@ -32,6 +32,7 @@ function App() {
         <Link to="/details">Book Details</Link> {"   "}
       </nav>
 
+      {/* Project Requirement: Use of routing is must to go to different components. */}
       <Routes>
         <Route path="/project" element={<Project />} />
         <Route path="/books" element={<BookSearch />} />

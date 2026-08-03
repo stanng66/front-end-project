@@ -8,6 +8,7 @@
 // --------------------
 // This program demonstrates react, routing, api integration and rendering
 // ====================
+import './BookSearch.css';
 import { useState } from "react";
 
 export default function BookSearch() {
@@ -15,8 +16,9 @@ export default function BookSearch() {
     const [books, setBooks] = useState([]);
     const [error, setError] = useState("");
 
-    // Priject Requirement: component 1 - show fetched JSONdata
+    // Project Requirement: component 1 - show fetched JSONdata
     const searchBooks = async () => {
+        // Project Requirement:	Your web application should perform some processing on the received data and display the result(Your web application should incorporate/handle AJAX OR FETCH call)
         fetch(`https://api.bigbookapi.com/search-books?query=${query}&number=10&api-key=73f838a7148744149b5199c9bd46e28e`)
           .then(res => {
             if (!res.ok) throw new Error("Failed to retrieve book data");
@@ -34,6 +36,7 @@ export default function BookSearch() {
           <h2>Book discovery</h2>
 
           {/* Project Requirement: component 2 - ask user input data */}
+          {/* Project Requirement: Your web application should perform some interaction with the user */}
           <input
             type="text"
             placeholder="Search a book"
