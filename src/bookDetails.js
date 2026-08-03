@@ -39,23 +39,31 @@ export default function BookDetails() {
                 <div key={index}>
                   {group.map((book) => (
                     <div key={book.id} style={{ marginBottom: "20px" }}>
-                      <h3>{book.title}</h3>
+                      <h3>{book.title}</h3>   {/* */}
 
-                      {book.image && (
+                      {book.image && (  // book image
                         <img
                           src={book.image}
                           alt={book.title}
                           style={{ width: "150px", borderRadius: "8px" }}
                         />
-                        )}
+                      )}
 
-                        {book.description && (
-                          <p><strong>Description:</strong> {book.description}</p>
-                        )}
+                      {book.authors && (   // book authors
+                        <p>
+                          <strong>Author:</strong>{" "} 
+                          {Array.isArray(book.authors) 
+                            ? book.authors.map(author => author.name || author).join(",")
+                            : book.authors?.name || "Unknown Author"}
+                        </p>
+                      )}
 
-                        {book.authors && (
-                          <p><strong>Author:</strong> {book.authors.join(", ")}</p>
-                        )}
+                      {book.rating && (
+                        <p>
+                          <strong>Rating:</strong>{" "}
+                          {(book.rating?.average * 10).toFixed(2) || "No rating available"}
+                        </p>
+                      )}
                     </div>
                    ))}
                 </div>

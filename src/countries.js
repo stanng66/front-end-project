@@ -18,7 +18,7 @@ function Countries() {
             <div className="country1-info">
                 <h3>Canada</h3>
                 <img src="/images/canada-flag.png" alt="Canada Flag" className="country-flag" />
-                <P><strong>Capital:</strong> Ottawa</P>
+                <p><strong>Capital:</strong> Ottawa</p>
                 <p><strong>Region:</strong> North America</p>
                 <p><strong>Largest City:</strong> Toronto</p>
                 <p><strong>Official Language:</strong> English, French</p>
@@ -32,7 +32,7 @@ function Countries() {
             <div className="country2-info">
                 <h3>South Korea</h3>
                 <img src="/images/south-korea-flag.png" alt="South Korea Flag" className="country-flag" />
-                <P><strong>Capital:</strong> Seoul</P>
+                <p><strong>Capital:</strong> Seoul</p>
                 <p><strong>Region:</strong> East Asia</p>
                 <p><strong>Largest City:</strong> Seoul</p>
                 <p><strong>Official Language:</strong> Korean</p>
