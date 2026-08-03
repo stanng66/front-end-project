@@ -9,3 +9,133 @@ August 17, 2026
 This program demonstrates react, routing, api integration and rendering
 ==================== */ 
 /* Project Requirement: utilizing CSS */
+:root { /* Created for consitency and for easier adjustments when needed */
+    /* Colour Palette */
+    --clr-primary: #d81b60;   /* Deep Pink */ /* original pick - French Mauve #DE83CB */
+    --clr-secondary: #9e063d; /* Pink Lavender - #D7B4DC */
+    --clr-accent: #FA86B2;    /* Light Pink */
+    --clr-bg-light: #ECE3DE;  /* Isabelline */
+    --clr-bg-main: #B0D3E6;   /* Columbia Blue */
+
+    /* Text Colours */
+    --clr-text-main: #333333;
+    --clr-text-soft: #3a2f3a; /* slightly purple tone */
+    --clr-text-white: #ffffff;
+    --clr-text-muted: #6f5f6f;
+
+    /* Font Sizes */
+    --fs-xsm: 0.75rem;
+    --fs-sm: 0.9rem;
+    --fs-base: 1rem;
+    --fs-md: 1.2rem;
+    --fs-lg: 1.8rem;
+    --fs-xl: 2.5rem;
+
+    /* Font Weights */
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    /* UI Colours */
+    --clr-border: #dddddd;
+    --clr-input-border: #cccccc;
+    --clr-bg-white: #FAFAFA;
+
+    /* Dark Mode */
+    --clr-dark-bg: #1a1a1a;
+    --clr-dark-surface: #2a2a2a;
+    --clr-dark-header: #222222;
+    --clr-dark-border: #444444;
+
+    /* Shadows */
+    --shadow-xs: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+    --shadow-lg: 0 8px 20px rgba(0,0,0,0.2);
+
+    /* Border Radius */
+    --radius-sm: 5px;
+    --radius-md: 8px;
+    --radius-lg: 10px;
+    --radius-xl: 20px;
+
+    /* Spacing */
+    --space-xs: 5px;
+    --space-sm: 10px;
+    --space-md: 20px;
+    --space-lg: 30px;
+    --space-xl: 60px;
+
+    /* Transitions */
+    --transition: all 0.3s ease;
+
+    /* Border */
+    --clr-border: #dddddd
+}
+
+.header {
+    text-align: center;
+    background-color: var(--clr-bg-main);
+    padding: var(--space-sm);
+    border-bottom: 3px solid var(--clr-secondary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header h1 {
+    font-size: var(--fs-xl);
+    color: var(--clr-primary);
+}
+
+.header h2 {
+    font-size: var(--fs-lg);
+    color: var(--clr-secondary);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    background-color: var(--clr-bg-light);
+    padding: var(--space-sm);
+    border-bottom: 2px solid var(--clr-secondary);
+    z-index: 999;
+    position: fixed;
+    top: 194px;
+    left: 0;
+    width: 100%;
+}
+
+nav a {
+    color: var(--clr-text-soft);
+    text-decoration: none;
+    font-size: var(--fs-base);
+    transition: var(--transition);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#root {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding-top: 220px;
+}
+
+.footer {
+    text-align: center;
+    background-color: var(--clr-bg-main);
+    color: var(--clr-text-muted);
+    padding: var(--space-sm);
+    border-top: 3px solid var(--clr-secondary);
+    font-size: var(--fs-xsm);
+    margin-top: var(--space-lg);
+}

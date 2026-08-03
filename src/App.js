@@ -19,11 +19,12 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 function App() {
   return (
     <>
-    <div className="Header"> 
+    <div className="header"> 
       <h1> Final Project </h1>
       <h2> Stanley Nguyen </h2>
     </div>
     
+    <main>
     <BrowserRouter>
       <nav>
         <Link to="/project">Project</Link> {"   "} |
@@ -40,6 +41,16 @@ function App() {
         <Route path="/details" element={<BookDetails />} />
       </Routes>
     </BrowserRouter>
+    </main>
+
+    <div className="footer">
+      <p>Project</p>
+      <p>Stanley Nguyen</p>
+      <p>Humber College</p>
+      <p>CPAN-144-RNA</p>
+      <p>Ronak Sheth</p>
+      <p>August 17, 2026</p>
+    </div>
     </>
   );
 }
