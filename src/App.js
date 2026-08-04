@@ -24,7 +24,6 @@ function App() {
       <h2> Stanley Nguyen </h2>
     </div>
     
-    <main>
     <BrowserRouter>
       <nav>
         <Link to="/project">Project</Link> {"   "} |
@@ -34,14 +33,15 @@ function App() {
       </nav>
 
       {/* Project Requirement: Use of routing is must to go to different components. */}
-      <Routes>
-        <Route path="/project" element={<Project />} />
-        <Route path="/books" element={<BookSearch />} />
-        <Route path="/countries" element={<Countries />} />
-        <Route path="/details" element={<BookDetails />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/project" element={<Project />} />
+          <Route path="/books" element={<BookSearch />} />
+          <Route path="/countries" element={<Countries />} />
+          <Route path="/details" element={<BookDetails />} />
+        </Routes>
+      </main>
     </BrowserRouter>
-    </main>
 
     <div className="footer">
       <p>Project</p>

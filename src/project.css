@@ -71,3 +71,33 @@ This program demonstrates react, routing, api integration and rendering
     /* Border */
     --clr-border: #dddddd
 }
+
+.project-header h2, .project-header h3 {
+    text-align: center;
+}
+
+.project-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: var(--space-md);
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--clr-bg-light);
+}
+
+.student-info, .student-interest, .student-contribution, .student-ambition, .skills-used, .tools-tech, .project-summary {
+    margin-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--clr-border);
+    padding-bottom: var(--space-sm);
+}
+
+.student-info h3, .student-interest h3, .student-contribution h3, .student-ambition h3, .skills-used h3, .tools-tech h3, .project-summary h3 {
+    margin-bottom: var(--space-xs);
+}
+
+p {
+    line-height: 1.6;
+    color: var(--clr-text-main);
+}

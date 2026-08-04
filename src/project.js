@@ -15,12 +15,13 @@ function Project() {
     // Project Requirement: component 3 - information about both group members like name, interest, contribution, ambition
     return (
         <>
-        <div className="Header"> 
+        <div className="project-container">
+        <div className="project-header"> 
           <h2> Component 3 </h2>
           <h3> Stanley Nguyen </h3>
         </div>
 
-        <div classname="student-info"> 
+        <div className="student-info"> 
             <h3>Member Information</h3>
             <p>Member name: Stanley Nguyen</p>
             <p>Student id: N01570766</p>
@@ -43,7 +44,7 @@ function Project() {
             <p>My ambition is to continue improving my front-end and back-end development skills to eventually build a full-stack application on my own. I aim to continue learning more modern web technologies as I progress in my studies.</p>
         </div>
 
-        <div classname="skills-used"> 
+        <div className="skills-used"> 
             <h3>Skills Used</h3>
             <ul>
                 <li>React Components</li>
@@ -62,6 +63,7 @@ function Project() {
         <div className="project-summary"> 
             <h3>Project Summary</h3>
             <p>This project demonstrates React components, routingm API integration, and rendering. It includes four required components and additional features for enhanced functionality.</p>
+        </div>
         </div>
         </>
     );
