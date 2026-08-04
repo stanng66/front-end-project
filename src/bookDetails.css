@@ -71,3 +71,19 @@ This program demonstrates react, routing, api integration and rendering
     /* Border */
     --clr-border: #dddddd
 }
+
+.book-details-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+    padding: var(--space-md);
+}
+
+.book-card {
+    background-color: var(--clr-bg-white);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-xs);
+    padding: var(--space-sm);
+    text-align: center;
+}

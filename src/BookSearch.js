@@ -48,16 +48,21 @@ export default function BookSearch() {
 
           <p style={{ color: "red" }}>{error}</p>
 
-          {books.map((group, index) => (
-            <div key={index}>
-                {group.map((book) => (
-                    <div key={book.id}>
-                        <h3>{book.title}</h3>
-                        {book.image && <img src={book.image} alt={book.title} />}
-                    </div>
-                ))}
-            </div>
-          ))}
+          <div className="book-search-container">
+            {books.flat().map((book) => (
+              <div key={book.id} className="book-card">
+                <h3>{book.title}</h3>
+
+                {book.image && (
+                  <img 
+                    src={book.image} 
+                    alt={book.title} 
+                    style={{ width: "150px", borderRadius: "8px" }}
+                  />
+                )}
+              </div>
+            ))}
+          </div>
         </>
     );
 }

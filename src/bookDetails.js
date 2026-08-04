@@ -29,45 +29,43 @@ export default function BookDetails() {
         .catch(err => setError(err.message));
     }, []);
 
-    return (
-        <>
-            <h2>All Available Books</h2>
+  return (
+    <>
+      <h2>All Available Books</h2>
 
-            <p style={{ color: "red" }}>{error}</p>
+      <p style={{ color: "red" }}>{error}</p>
 
-            {books.map((group, index) => (
-                <div key={index}>
-                  {group.map((book) => (
-                    <div key={book.id} style={{ marginBottom: "20px" }}>
-                      <h3>{book.title}</h3>   {/* */}
+      <div className="book-details-container">
+        {books.flat().map((book) => (
+          <div key={book.id} className="book-card">
+            <h3>{book.title}</h3>  
 
-                      {book.image && (  // book image
-                        <img
-                          src={book.image}
-                          alt={book.title}
-                          style={{ width: "150px", borderRadius: "8px" }}
-                        />
-                      )}
+            {book.image && (  // book image
+              <img
+                src={book.image}
+                alt={book.title}
+                style={{ width: "150px", borderRadius: "8px" }}
+              />
+            )}
 
-                      {book.authors && (   // book authors
-                        <p>
-                          <strong>Author:</strong>{" "} 
-                          {Array.isArray(book.authors) 
-                            ? book.authors.map(author => author.name || author).join(",")
-                            : book.authors?.name || "Unknown Author"}
-                        </p>
-                      )}
+            {book.authors && (   // book authors
+              <p>
+                <strong>Author:</strong>{" "} 
+                {Array.isArray(book.authors) 
+                  ? book.authors.map(author => author.name || author).join(",")
+                  : book.authors?.name || "Unknown Author"}
+              </p>
+            )}
 
-                      {book.rating && (
-                        <p>
-                          <strong>Rating:</strong>{" "}
-                          {(book.rating?.average * 10).toFixed(2) || "No rating available"}
-                        </p>
-                      )}
-                    </div>
-                   ))}
-                </div>
-            ))}
-        </>
-    );
+            {book.rating && (   // book rating
+              <p>
+                <strong>Rating:</strong>{" "}
+                {(book.rating?.average * 10).toFixed(2) || "No rating available"}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+    </>
+  );
 }
