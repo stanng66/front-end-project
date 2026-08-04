@@ -33,7 +33,7 @@ This program demonstrates react, routing, api integration and rendering
 
     /* Font Weights */
     --fw-normal: 400;
-    --fw-bold: 700;
+    --fw-bold: 800;
 
     /* UI Colours */
     --clr-border: #dddddd;
@@ -70,4 +70,56 @@ This program demonstrates react, routing, api integration and rendering
 
     /* Border */
     --clr-border: #dddddd
+}
+
+.countries-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    padding: var(--space-md);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.country1-info h3, .country2-info h3 {
+    margin-bottom: var(--space-xs);
+    color: var(--clr-secondary);
+}
+
+.country1-info p, .country2-info p {
+    line-height: 1.6;
+    margin-bottom: var(--space-xs);
+    color: var(--clr-text-soft);
+    font-weight: 300;
+    display: flex;
+    gap: 10px;
+}
+
+p strong {
+    font-weight: 800;
+    color: var(--clr-secondary);
+    min-width: 150px;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+}
+
+
+.country1-info, .country2-info {
+    padding:var(--space-md);
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.country-flag {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+.country-scenic {
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    border-radius: var(--radius-md);
+    margin-top: var(--space-sm);
 }

@@ -83,7 +83,7 @@ This program demonstrates react, routing, api integration and rendering
 }
 
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: var(--clr-bg-light);
 }
 
