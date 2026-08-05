@@ -12,7 +12,7 @@ import './App.css';
 import Project from './project'            // Component 3
 import BookSearch from './BookSearch';     // Component 1 and 2
 import Countries from './countries';       // Component 4
-import BookDetails from './bookDetails';   // Additional component
+import BookDetails from './bookDetails';   // Component 1
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 
