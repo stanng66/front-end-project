@@ -25,6 +25,7 @@ function Countries() {
                 <p><strong>Population:</strong> ≈ 41 million</p>
                 <p><strong>Currency:</strong> Canadian Dollar (CAD - $)</p>
                 <p><strong>Fun Fact:</strong> Canada has hosted 3 Olympics. Montreal, Quebec in 1976, Calgary, Alberta in 1988, and Vancouver, British Columbia in 2010.</p>
+                <p><strong>Tourism Website:</strong> <a href="https://travel.gc.ca/canadian-tourism" target="blank" rel="noopener noreferrer">Canada Official Tourism Website</a></p>
                 <img src="/images/canada-scenic.jpg" alt="Canada Scenic View" className="country-scenic" />
             </div>
 
@@ -39,6 +40,7 @@ function Countries() {
                 <p><strong>Population:</strong> ≈ 51 million</p>
                 <p><strong>Currency:</strong> South Korean Won (KRW - ₩)</p>
                 <p><strong>Fun Fact:</strong> The Hangeul language was created to increase literacy.</p>
+                <p><strong>Tourism Website:</strong> <a href="https://english.visitkorea.or.kr/svc/main/index.do" target="blank" rel="noopener noreferrer">South Korea Official Tourism Website</a></p>
                 <img src="/images/south-korea-scenic.jpg" alt="South Korea Scenic View" className="country-scenic" />
             </div>
         </div>
