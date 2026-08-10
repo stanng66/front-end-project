@@ -31,7 +31,7 @@ function Project() {
 
         <div className="student-interest"> 
             <h3>Interest</h3>
-            <p>I am interested in learning some front-end development as well as other languages and databse to build both my technical skills and problem-solving abilities.</p>
+            <p>I am interested in learning some front-end development as well as other languages and database to build both my technical skills and problem-solving abilities.</p>
         </div>
 
         <div className="student-contribution"> 

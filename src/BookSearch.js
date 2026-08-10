@@ -25,8 +25,8 @@ export default function BookSearch() {
       return;
     }
 
-    if (query.length < 2) {
-      setError("Search must be at least 2 characters long.");
+    if (query.length < 5) {
+      setError("Search must be at least 5 characters long.");
       return;
     }
 
@@ -45,10 +45,10 @@ export default function BookSearch() {
 
   return (
       <>
-        <h2>Book discovery</h2>
-
+        <center><h2>Book discovery</h2></center>
         {/* Project Requirement: component 2 - ask user input data */}
         {/* Project Requirement: Your web application should perform some interaction with the user */}
+        <center>
         <input
           type="text"
           placeholder="Search a book"
@@ -56,7 +56,8 @@ export default function BookSearch() {
           onChange={(e) => setQuery(e.target.value)}
         />
 
-        <button onClick={searchBooks}>Search</button>
+        <button onClick={searchBooks}>Search</button>  
+        </center>
 
         <p style={{ color: "red" }}>{error}</p>
 
