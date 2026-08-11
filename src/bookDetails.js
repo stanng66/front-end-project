@@ -19,14 +19,15 @@ export default function BookDetails() {
 
   // Your web application should perform some processing on the received data and display the results (FETCH call)
   useEffect(() => {
-    fetch(`https://api.bigbookapi.com/search-books?query=a&number=24&api-key=73f838a7148744149b5199c9bd46e28e`)
+    fetch(`https://api.bigbookapi.com/search-books?query=harry&number=24&api-key=73f838a7148744149b5199c9bd46e28e`)
       .then(res => {
         if (!res.ok) throw new Error("Failed to retrieve book data");
         return res.json();
       })
       .then(data => {
-        console.log(data);
-        setBooks(data.books);
+        console.log("API RESPONSE:",data);
+        console.log("Books:", data.books);
+        setBooks(data.books || []);
         setError("");
       })
     .catch(err => setError(err.message));
@@ -39,35 +40,40 @@ export default function BookDetails() {
       <p style={{ color: "red" }}>{error}</p>
 
       <div className="book-details-container">
-        {books.slice(0, visibleCount).map((book) => (
-          <div key={book.id} className="book-card">
-            <h3>{book.title}</h3>   {/* Book title */}
+      {books.slice(0, visibleCount).map((book, index) => {
+          console.log("BOOK ITEM:", book);
+          const item = book[0];
 
-            {book.image && (  // book image
+          return (
+            <div key={index} className="book-card">
+              <h3>{item.title}</h3>   {/* Book title */}
+
+            {item.image && (  // book image
               <img
-                src={book.image}
-                alt={book.title}
+                src={item.image}
+                alt={item.title}
                 style={{ width: "150px", borderRadius: "8px" }}
               />
             )}
 
-            {book.authors && (   // book authors
+            {item.authors && (   // book authors
               <p>
                 <strong>Author:</strong>{" "} 
-                {Array.isArray(book.authors) 
-                  ? book.authors.map(author => author.name || author).join(",")
-                  : book.authors?.name || "Unknown Author"}
+                {Array.isArray(item.authors) 
+                  ? item.authors.map(author => author.name || author).join(",")
+                  : item.authors?.name || "Unknown Author"}
               </p>
             )}
 
-            {book.rating && (   // book rating
+            {item.rating && (   // book rating
               <p>
                 <strong>Rating:</strong>{" "}
-                {(book.rating?.average * 10).toFixed(2) || "No rating available"}
+                {(item.rating?.average * 10).toFixed(2) || "No rating available"}
               </p>
             )}
           </div>
-        ))}
+        );
+      })}
       </div>
 
       {visibleCount < books.length && (
